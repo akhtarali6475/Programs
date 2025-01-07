@@ -1,17 +1,13 @@
 class FizzBuzz
   def self.fizz_buzz(number)
-    (1..number).each do |i|
-      result = if (i % 3 == 0) && (i % 5 == 0)
-                  "FizzBuzz"
-                elsif (i % 3 == 0)
-                  "Fizz"
-                elsif (i % 5 == 0)
-                  "Buzz"
-                else
-                  i
-                end
-
-      puts result
+    if (number % 3 == 0) && (number % 5 == 0)
+      "FizzBuzz"
+    elsif (number % 3 == 0)
+      "Fizz"
+    elsif (number % 5 == 0)
+      "Buzz"
+    else
+      number
     end
   end
 
@@ -25,5 +21,3 @@ class FizzBuzz
     end
   end
 end
-
-FizzBuzz.optimized_fizz_buzz(100)
